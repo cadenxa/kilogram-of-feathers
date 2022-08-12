@@ -77,11 +77,14 @@ void perceive() {
   std::cout << "What do you notice first?\n(enter the number of your answer)\n1. Itchy twine around your neck.\n2. The light touch of paper on your chest\n3. Nothing. What?\n";
   int answer;
   std::cin >> answer;
-  if (answer == 1 || answer == 2) {std::cout << "\n\n"; strangeLetter();}
+  if (answer == 1 || answer == 2) {
+    std::cout << "You feel around your chest, and something crinkles. You're wearing a piece of school notebook paper, with twine threaded through the holes and tied in a loop to make a necklace. (next)\n"; next();
+    std::cout << "You stand up and take it off with care. There's a note written on it. (next)\n"; next();
+    std::cout << "\n\n"; strangeLetter();}
   else if (answer == 3) {std::cout << "\n\n"; rollPercepPath();}
   else {
     std::cout << "Enter 1,2, or 3.\n\n";
-    blackHole();
+    perceive();
     }
 }
 
